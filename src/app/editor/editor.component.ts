@@ -18,7 +18,7 @@ export class EditorComponent implements OnInit {
 
   getEvents(){
     this.events =  this.eventsService.getEvents()
-
+    
   }
 
   codingDone(){

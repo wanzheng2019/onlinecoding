@@ -18,24 +18,29 @@ export class ReplayComponent implements OnInit {
     this.getEvents();
     this.clearDoc();
     this.replay();
+    console.log(this.document);
+    console.log(this._elementRef.nativeElement);
   }
 
   clearDoc(){
-    //this._elementRef.nativeElement.remove();
-   // this._elementRef.nativeElement.querySelector('#replayer').remove();
+  //  this._elementRef.nativeElement.remove();
+  //  this._elementRef.nativeElement.querySelector('#replayer').remove();
    // this._elementRef.nativeElement.innerHTML = '<div id="replayer"></div>'
   // console.log(this._elementRef.nativeElement);
    console.log(this.document.body);
   }
 
+  addButton(){
+    this._elementRef.nativeElement.add()
+  }
   getEvents(){
     this.events =  this.eventsService.getEvents()
     console.log(this.events);
   }
 
   replay(){
-    let target = this._elementRef.nativeElement.querySelector('#replayer');
-  // let target = this.document.body;
+  //  let target = this._elementRef.nativeElement.querySelector('#replayer');
+   let target = this.document.body;
     this.replayer = new Replayer(this.events,
         {
           speed: 1,
